@@ -39,5 +39,4 @@ or any of its subsidiaries or its affiliates. The official Xiaomi website can be
 
 ## License
 This project is under the MIT license.
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/nalecz)
+[![License MIT](https://badgen.net/badge/license/MIT/blue)]
