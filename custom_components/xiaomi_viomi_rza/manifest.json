@@ -1,15 +1,15 @@
 {
-    "codeowners": ["@nergal"],
+    "codeowners": ["@defconhaya"],
     "config_flow": true,
     "dependencies": ["xiaomi_miio"],
-    "documentation": "https://github.com/nergal/homeassistant-vacuum-viomi",
+    "documentation": "https://github.com/defconhaya/homeassistant-vacuum-viomi",
     "domain": "xiaomi_viomi_rza",
     "iot_class": "local_polling",
-    "issue_tracker": "https://github.com/nergal/homeassistant-vacuum-viomi/issues",
-    "name": "Xiaomi Viomi Vaccum",
+    "issue_tracker": "https://github.com/defconhaya/homeassistant-vacuum-viomi/issues",
+    "name": "Xiaomi Viomi Vaccum RZA",
     "requirements": [
         "construct>=2.10.56",
         "python-miio>=0.5.6"
     ],
-    "version": "0.0.3"
+    "version": "0.0.4"
 }
