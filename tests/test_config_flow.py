@@ -6,8 +6,8 @@ from homeassistant import config_entries, setup
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import RESULT_TYPE_CREATE_ENTRY, RESULT_TYPE_FORM
 
-from custom_components.xiaomi_viomi.config_flow import CannotConnect, InvalidAuth
-from custom_components.xiaomi_viomi.const import DOMAIN
+from custom_components.xiaomi_viomi_rza.config_flow import CannotConnect, InvalidAuth
+from custom_components.xiaomi_viomi_rza.const import DOMAIN
 
 
 async def test_form(hass: HomeAssistant) -> None:
@@ -26,16 +26,16 @@ async def test_form(hass: HomeAssistant) -> None:
     }
 
     with patch(
-        "custom_components.xiaomi_viomi.config_flow.ViomiDeviceHub.async_device_is_connectable",
+        "custom_components.xiaomi_viomi_rza.config_flow.ViomiDeviceHub.async_device_is_connectable",
         return_value=True,
     ), patch(
-        "custom_components.xiaomi_viomi.config_flow.ViomiDeviceHub.device_info",
+        "custom_components.xiaomi_viomi_rza.config_flow.ViomiDeviceHub.device_info",
         new_callable=PropertyMock,
         return_value=namedtuple("ObjectName", device_info_mock.keys())(
             *device_info_mock.values()
         ),
     ), patch(
-        "custom_components.xiaomi_viomi.async_setup_entry",
+        "custom_components.xiaomi_viomi_rza.async_setup_entry",
         return_value=True,
     ) as mock_setup_entry:
         result2 = await hass.config_entries.flow.async_configure(
@@ -67,7 +67,7 @@ async def test_form_invalid_auth(hass: HomeAssistant) -> None:
     )
 
     with patch(
-        "custom_components.xiaomi_viomi.config_flow.ViomiDeviceHub.async_device_is_connectable",
+        "custom_components.xiaomi_viomi_rza.config_flow.ViomiDeviceHub.async_device_is_connectable",
         side_effect=InvalidAuth,
     ):
         result2 = await hass.config_entries.flow.async_configure(
@@ -89,7 +89,7 @@ async def test_form_cannot_connect(hass: HomeAssistant) -> None:
     )
 
     with patch(
-        "custom_components.xiaomi_viomi.config_flow.ViomiDeviceHub.async_device_is_connectable",
+        "custom_components.xiaomi_viomi_rza.config_flow.ViomiDeviceHub.async_device_is_connectable",
         side_effect=CannotConnect,
     ):
         result2 = await hass.config_entries.flow.async_configure(

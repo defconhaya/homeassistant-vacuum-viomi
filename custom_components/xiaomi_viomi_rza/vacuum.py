@@ -23,8 +23,8 @@ from homeassistant.components.xiaomi_miio.device import XiaomiMiioEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, CONF_TOKEN, STATE_OFF, STATE_ON
 from homeassistant.util.dt import as_utc
-from miio import DeviceException, ViomiVacuum
-from miio.viomivacuum import ViomiVacuumSpeed, ViomiVacuumStatus
+from miio.integrations.vacuum.viomi.viomivacuum import DeviceException, ViomiVacuum
+from miio.integrations.vacuum.viomi.viomivacuum import ViomiVacuumSpeed, ViomiVacuumStatus
 
 from .const import DEVICE_PROPERTIES
 

@@ -10,7 +10,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import ConfigEntryAuthFailed, HomeAssistantError
 from homeassistant.helpers.device_registry import format_mac
-from miio import DeviceException, ViomiVacuum
+from miio.integrations.vacuum.viomi.viomivacuum import DeviceException, ViomiVacuum
 from miio.device import DeviceInfo
 
 from .const import CONF_MAC, CONF_MODEL, DOMAIN
