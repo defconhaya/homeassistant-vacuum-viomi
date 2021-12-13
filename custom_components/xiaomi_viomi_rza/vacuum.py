@@ -230,8 +230,8 @@ class ViomiVacuumIntegration(XiaomiMiioEntity, StateVacuumEntity):
         for prop in DEVICE_PROPERTIES:
             value = self._device.send("get_prop", [prop])
             result[prop] = value[0] if len(value) else None
-            result["_model"] = "Ferrari Vacuum"
-            result["_info"] = "tesla v2"
+        result["_model"] = "Ferrari Vacuum"
+        result["_info"] = "tesla v2"
         return ViomiVacuumStatus(result)
 
     def update(self):
