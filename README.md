@@ -39,4 +39,4 @@ or any of its subsidiaries or its affiliates. The official Xiaomi website can be
 
 ## License
 This project is under the MIT license.
-[![License MIT](https://badgen.net/badge/license/MIT/blue)]
+![License MIT](https://badgen.net/badge/license/MIT/blue)
