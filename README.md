@@ -11,7 +11,7 @@ Xiaomi Viomi vacuum robot integration for Home Assistant for chinese version v7.
 
 ## Installation
 ### HACS
-Install it through HACS by adding this as a custom repository: https://github.com/defconhaya/homeassistant-vacuum-viomi, go to the integrations page in your configuration, click on the `Add Integration` button in the bottom right corner of a screen, and search for `Xiaomi Viomi Vacuum`.
+Install it through HACS by adding this as a custom repository: https://github.com/defconhaya/homeassistant-vacuum-viomi, go to the integrations page in your configuration, click on the `Add Integration` button in the bottom right corner of a screen, and search for `Xiaomi Viomi Vacuum rza`.
 
 ### Manual
 Copy contents of `custom_components` folder to your Home Assistant `config/custom_components` folder. Restart Home Assistant, and then the integration can be added and configured through the native integration setup. If you don't see it in the native integrations list, press Ctrl+F5 to refresh the browser while you're on that page and retry.
@@ -20,10 +20,10 @@ Also you may add the manual configuration to `configuration.yaml` file, like the
 
 ```
 vacuum:
-  - platform: xiaomi_viomi
+  - platform: xiaomi_viomi_rza
     host: 192.168.1.1
     token: !secret vacuum
-    name: Vacuum V8
+    name: Vacuum V7
 ```
 
 ## Tested models
